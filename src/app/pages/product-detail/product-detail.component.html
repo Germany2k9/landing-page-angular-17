@@ -1,0 +1,19 @@
+<div class="container">
+    @if (loading) {
+        <h3>loading..</h3>
+    }
+    <!-- creamos una card  pasandole los valores interpolados  -->
+    @if (!loading) {
+        <div class="card" style="width: 18rem;">
+            <img src="{{product?.image}}" class="card-img-top" alt="{{product?.title}}">
+            <div class="card-body">
+              <!--importamos el Ccommon module para usar el pipe  -->
+              <h4>{{product?.price  | currency }}</h4>
+              <h5 class="card-title">{{product?.title}}</h5>
+              <p class="card-text">{{product?.description}}</p>
+            
+            </div>
+          </div>
+      
+    }
+</div>
